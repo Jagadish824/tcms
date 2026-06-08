@@ -1,5 +1,6 @@
+
 import React from "react";
-import { Truck, User, Users, ReceiptText } from "lucide-react";
+import { Truck, User, Users, ReceiptText, LucideIcon } from "lucide-react";
 
 const nodes = [
   {
@@ -106,8 +107,12 @@ function EcosystemSection() {
     </section>
   );
 }
+interface NodeProps {
+  icon: LucideIcon;
+  title: string;
+}
 
-function Node({ icon: Icon, title }) {
+function Node({ icon: Icon, title }: NodeProps) {
   return (
     <div className="bg-white border border-gray-200 rounded-2xl shadow-lg px-10 py-4 text-center hover:scale-110 hover:shadow-xl transition-all duration-300">
       <Icon
