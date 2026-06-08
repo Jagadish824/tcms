@@ -1,6 +1,4 @@
 import React from "react";
-import { Linkedin, Mail } from "lucide-react";
-import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 
 const footerLinks = {
   Product: ["GPS Tracking", "Fuel Management", "Customer Portal", "Compliance"],
