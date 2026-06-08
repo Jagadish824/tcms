@@ -66,8 +66,8 @@ function SavingsCalculator() {
                 type="number"
                 value={fuelSpend}
                 onChange={(e) =>
-                  setFuelSpend(e.target.value)
-                }
+  setFuelSpend(Number(e.target.value))
+}
                 className="w-full p-5 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#00327D] focus:border-transparent outline-none transition-all"
                 placeholder="50000"
               />
@@ -82,9 +82,9 @@ function SavingsCalculator() {
               <input
                 type="number"
                 value={adminHours}
-                onChange={(e) =>
-                  setAdminHours(e.target.value)
-                }
+              onChange={(e) =>
+  setAdminHours(Number(e.target.value))
+}
                 className="w-full p-5 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#00327D] focus:border-transparent outline-none transition-all"
                 placeholder="40"
               />
