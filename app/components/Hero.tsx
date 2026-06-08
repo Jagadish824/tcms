@@ -1,7 +1,23 @@
+'use client'
 import { LocateIcon, MapPin, PlayCircle } from "lucide-react";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 function Hero() {
+  const images = [
+  "https://images.unsplash.com/photo-1502877338535-766e1452684a",
+  "https://images.unsplash.com/photo-1519003722824-194d4455a60c",
+  "https://lh3.googleusercontent.com/aida-public/AB6AXuByeQbnpE06XNV9uWGPcJqB3ZHxQvK1DRlTa6v_-HTjS9MnsgCiW1sF1nOyzrPG-PFcL2hNbexS5Q_RPBCG2YYSJ0DfvBZH5LzJe4sgpXTop4ZvEptNhz1mZ19RHTw4mddCFMwI08RiOzCTBxeUzc9PKCqxMNqEBK_RpHznjE4XQenkH3qrEj0H3oFrZ0F-1Fd_7knZN_7Bgjudp5c4mE1LGRYoK3ElGEHD0gGFKhZicmpFJdLbJ5PkrYj1JPIkCOdinIxe0UZdK8A",
+];
+
+const [currentSlide, setCurrentSlide] = useState(0);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setCurrentSlide((prev) => (prev + 1) % images.length);
+  }, 4000);
+
+  return () => clearInterval(interval);
+}, []);
   return (
     <section className="lg:pt-32 pt-25 md:pb-20 pb-10 lg:px-10 px-5">
       <div className="mx-auto">
@@ -35,13 +51,65 @@ function Hero() {
           </div>
 
           {/* Right Image */}
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/10]" data-aos="fade-left">
-            <img
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuByeQbnpE06XNV9uWGPcJqB3ZHxQvK1DRlTa6v_-HTjS9MnsgCiW1sF1nOyzrPG-PFcL2hNbexS5Q_RPBCG2YYSJ0DfvBZH5LzJe4sgpXTop4ZvEptNhz1mZ19RHTw4mddCFMwI08RiOzCTBxeUzc9PKCqxMNqEBK_RpHznjE4XQenkH3qrEj0H3oFrZ0F-1Fd_7knZN_7Bgjudp5c4mE1LGRYoK3ElGEHD0gGFKhZicmpFJdLbJ5PkrYj1JPIkCOdinIxe0UZdK8A"
-              alt="Transport Fleet"
-              className="w-full h-full object-cover hover:scale-105 transition duration-700"
-            />
-          </div>
+{/* Right Image Slider */}
+<div
+  className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/10]"
+  data-aos="fade-left"
+>
+  {/* Images */}
+  <div
+    className="flex h-full transition-transform duration-700 ease-in-out"
+    style={{
+      transform: `translateX(-${currentSlide * 100}%)`,
+    }}
+  >
+    {images.map((image, index) => (
+      <img
+        key={index}
+        src={image}
+        alt={`Slide ${index + 1}`}
+        className="w-full h-full object-cover flex-shrink-0"
+      />
+    ))}
+  </div>
+
+  {/* Previous Button */}
+  <button
+    onClick={() =>
+      setCurrentSlide(
+        currentSlide === 0 ? images.length - 1 : currentSlide - 1
+      )
+    }
+    className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white"
+  >
+    <ChevronLeft size={20} />
+  </button>
+
+  {/* Next Button */}
+  <button
+    onClick={() =>
+      setCurrentSlide((currentSlide + 1) % images.length)
+    }
+    className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 p-2 rounded-full shadow-lg hover:bg-white"
+  >
+    <ChevronRight size={20} />
+  </button>
+
+  {/* Dots */}
+  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+    {images.map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentSlide(index)}
+        className={`w-3 h-3 rounded-full transition-all ${
+          currentSlide === index
+            ? "bg-white w-6"
+            : "bg-white/50"
+        }`}
+      />
+    ))}
+  </div>
+</div>
         </div>
 
         {/* Trust Row */}
