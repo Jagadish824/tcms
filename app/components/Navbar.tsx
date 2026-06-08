@@ -13,7 +13,7 @@ function Navbar() {
         "text-[#00327D] font-semibold border-b-2 border-[#00327D] pb-1 transition-all duration-300";
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md border-b border-gray-200">
+        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-md border-b border-gray-200" data-aos="fade-down">
             <div className="mx-auto h-16 px-6 lg:px-10 flex items-center justify-between">
 
                 {/* Logo */}

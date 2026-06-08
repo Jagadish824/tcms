@@ -55,11 +55,11 @@ function PricingSection() {
       <div className="lg:max-w-[85%] mx-auto">
         {/* Header */}
         <div className="text-center lg:mb-16 mb-5">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4" data-aos="fade-up">
             Simple, Transparent Pricing
           </h2>
 
-          <p className="text-lg text-[#434653] mx-auto">
+          <p className="text-lg text-[#434653] mx-auto" data-aos="fade-up">
             Plans that scale with your transport business.
           </p>
         </div>
@@ -74,6 +74,7 @@ function PricingSection() {
                   ? "border-2 border-[#00327D] shadow-2xl lg:scale-105 hover:scale-110 z-10"
                   : "border border-[#C3C6D5] hover:border-[#00327D] hover:shadow-xl"
               }`}
+              data-aos="fade-up"
             >
               {/* Badge */}
               {plan.featured && (
@@ -85,18 +86,18 @@ function PricingSection() {
               )}
 
               {/* Plan Info */}
-              <h3 className="text-2xl font-bold text-gray-900">{plan.title}</h3>
+              <h3 className="text-2xl font-bold text-gray-900" data-aos="fade-up">{plan.title}</h3>
 
-              <p className="text-gray-600 mt-2 mb-6">{plan.description}</p>
+              <p className="text-gray-600 mt-2 mb-6" data-aos="fade-up">{plan.description}</p>
 
               {/* Price */}
               <div className="mb-8">
-                <span className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-900">
+                <span className="lg:text-5xl md:text-4xl text-3xl font-bold text-gray-900" data-aos="fade-up">
                   {plan.price}
                 </span>
 
                 {plan.period && (
-                  <span className="text-gray-500 ml-1">{plan.period}</span>
+                  <span className="text-gray-500 ml-1" data-aos="fade-up">{plan.period}</span>
                 )}
               </div>
 
@@ -108,6 +109,7 @@ function PricingSection() {
                     className={`flex items-center gap-3 ${
                       !feature.included ? "text-gray-400" : "text"
                     }`}
+                    data-aos="fade-up"
                   >
                     {feature.included ? (
                       <Check size={24} className="text-[#006E25] shrink-0" />
@@ -127,6 +129,7 @@ function PricingSection() {
                     ? "bg-[#00327D] text-white hover:bg-[#00245A] hover:-translate-y-1 shadow-lg"
                     : "border border-[#00327D] text-[#00327D] hover:bg-[#00327D] hover:text-white"
                 }`}
+                data-aos="fade-up"
               >
                 {plan.buttonText}
               </button>

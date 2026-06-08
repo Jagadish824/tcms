@@ -53,11 +53,11 @@ function ProblemsSection() {
       <div className="mx-auto">
         {/* Heading */}
         <div className="text-center lg:mb-14 mb-5">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4" data-aos="fade-up">
             Still Managing Your Fleet Through Calls, WhatsApp and Excel?
           </h2>
 
-          <p className="text-lg text-[#434653] mx-auto">
+          <p className="text-lg text-[#434653] mx-auto" data-aos="fade-up">
             Manual operations lead to hidden costs and lost time. TCMS.ai
             eliminates the chaos.
           </p>
@@ -71,6 +71,7 @@ function ProblemsSection() {
               <div
                 key={index}
                 className="bg-white p-6 flex flex-col gap-4 rounded-2xl border border-[#C3C6D5] hover:border-red-500 hover:shadow-lg transition-all duration-300"
+                data-aos="fade-up"
               >
                 <img src={problem.icon} className="h-8 w-8"/>
 
@@ -87,8 +88,8 @@ function ProblemsSection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-14 bg-blue-900 rounded-md p-8 flex flex-col md:flex-row items-center justify-between gap-5">
-          <h4 className="text-2xl font-bold !text-white text-center md:text-left">
+        <div className="mt-14 bg-blue-900 rounded-md p-8 flex flex-col md:flex-row items-center justify-between gap-5"data-aos="fade-up">
+          <h4 className="text-2xl font-bold !text-white text-center md:text-left" >
             TCMS.ai Solves All Of These
           </h4>
 

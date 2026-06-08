@@ -26,7 +26,7 @@ function FuelSavingsSection() {
     <section className="py-10 lg:px-10 px-5 bg-[#F8F9FA]">
       <div className="lg:max-w-[80%] mx-auto grid lg:grid-cols-2 lg:gap-16 gap-7 items-center">
         {/* Left Content */}
-        <div className="space-y-10">
+        <div className="space-y-10" data-aos="fade-right">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
             Stop Losing Money On Fuel
           </h2>
@@ -56,7 +56,7 @@ function FuelSavingsSection() {
         </div>
 
         {/* Right Card */}
-        <div>
+        <div data-aos="fade-left">
           <div className="bg-white p-5 lg:p-10 rounded-3xl border border-[#C3C6D5] shadow-lg hover:shadow-2xl transition-all duration-500">
             <h5 className="text-xl font-semibold text-center text-gray-900 mb-12">
               Monthly Fuel Spend Per Fleet (RM)

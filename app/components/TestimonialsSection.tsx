@@ -108,7 +108,7 @@ function TestimonialsSection() {
         >
           {testimonials.map((item) => (
             <SwiperSlide key={item.id} className="!h-auto">
-              <div className="h-full flex flex-col p-8 bg-[#EDEEEF] rounded-lg">
+              <div className="h-full flex flex-col p-8 bg-[#EDEEEF] rounded-lg" data-aos="fade-up">
                 <p className="text-gray-700 italic leading-relaxed mb-8 text-lg">
                   "{item.quote}"
                 </p>

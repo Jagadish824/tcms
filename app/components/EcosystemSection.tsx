@@ -31,17 +31,17 @@ function EcosystemSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center md:mb-20 mb-5">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4" data-aos="fade-up">
             Everything Connected
           </h2>
 
-          <p className="text-lg text-[#434653] mx-auto">
+          <p className="text-lg text-[#434653] mx-auto" data-aos="fade-up">
             The central brain of your logistics operation.
           </p>
         </div>
 
         {/* Mobile View */}
-<div className="grid grid-cols-2 gap-4 md:hidden">
+<div className="grid grid-cols-2 gap-4 md:hidden" data-aos="fade-up">
   {nodes.map((item, index) => {
     const Icon = item.icon;
 
@@ -71,7 +71,7 @@ function EcosystemSection() {
 </div>
 
         {/* Ecosystem */}
-        <div className="relative w-full mx-auto h-[250px] hidden md:block">
+        <div className="relative w-full mx-auto h-[250px] hidden md:block" data-aos="fade-up">
 
           {/* Top Node */}
           <div className="absolute left-1/2 top-0 -translate-x-1/2">

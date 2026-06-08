@@ -9,7 +9,7 @@ const footerLinks = {
 
 function Footer() {
   return (
-    <footer className="bg-white border-t">
+    <footer className="" data-aos="fade-up">
       {/* Top Footer */}
       <div className="mx-auto lg:px-10 px-5 py-10">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-10">

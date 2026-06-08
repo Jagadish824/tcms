@@ -15,7 +15,7 @@ function SavingsCalculator() {
 
   return (
     <section className="py-10 lg:px-10 px-5 overflow-hidden">
-      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl border border-[#C3C6D5] overflow-hidden">
+      <div className="max-w-6xl mx-auto bg-white rounded-3xl shadow-xl border border-[#C3C6D5] overflow-hidden" data-aos="fade-up">
         
         {/* Header */}
         <div className="bg-[#00327D] p-8">

@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -12,10 +13,18 @@ import TestimonialsSection from "./components/TestimonialsSection";
 import PricingSection from "./components/PricingSection";
 import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
-
+import { useEffect } from "react";
+import AOS from 'aos'
+import "aos/dist/aos.css";
 export default function Home() {
+    useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
-    <div>
+    <div className="overflow-hidden">
         <Navbar/>
         <Hero/>
         <ProblemsSection/>

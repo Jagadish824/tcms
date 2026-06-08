@@ -25,11 +25,11 @@ function ShipmentVisibility() {
       <div className="mx-auto">
         {/* Header */}
         <div className="text-center lg:mb-16 mb-5">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4" data-aos="fade-up">
             Give Your Customers Amazon-Like Shipment Visibility
           </h2>
 
-          <p className="text-lg text-[#434653] mx-auto">
+          <p className="text-lg text-[#434653] mx-auto" data-aos="fade-up">
             "Fewer calls. More trust. More repeat business."
           </p>
         </div>
@@ -43,6 +43,7 @@ function ShipmentVisibility() {
                 <div
                   key={index}
                   className="bg-white p-5 rounded-xl border border-[#C3C6D5] hover:border-[#00327D] transition-all duration-300"
+                  data-aos="fade-up"
                 >
                   <h4 className="flex items-center gap-3 text-lg font-bold text-gray-900">
                     <img src={feature.icon}/>
@@ -59,7 +60,7 @@ function ShipmentVisibility() {
 
 
           {/* Right Tracking Card */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-3" data-aos="fade-left">
             <div className="bg-white rounded-3xl shadow-xl p-8 border border-[#C3C6D5]">
               {/* Top */}
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-10">

@@ -30,11 +30,11 @@ function ComplianceSection() {
       <div className="mx-auto">
         {/* Header */}
         <div className="text-center lg:mb-16 mb-5">
-          <h2 className="text-3xl md:text-4xl font-extrabold mb-4">
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4" data-aos="fade-up">
             Built For Malaysian Transport Operations
           </h2>
 
-          <p className="text-lg text-[#434653] mx-auto">
+          <p className="text-lg text-[#434653] mx-auto" data-aos="fade-up">
             We understand local regulations, so you don't have to worry about
             them.
           </p>
@@ -48,6 +48,7 @@ function ComplianceSection() {
               <div
                 key={index}
                 className="bg-white p-8 rounded-2xl border border-gray-200 shadow-sm text-center transition-all duration-300 hover:border-[#00327D] hover:scale-[1.02] hover:shadow-lg"
+              data-aos="fade-up"
               >
                 {/* Icon Circle */}
                 <div className="w-16 h-16 mx-auto mb-5 bg-[#EDEEEF] rounded-2xl flex items-center justify-center transition-colors duration-300 hover:bg-blue-50">
